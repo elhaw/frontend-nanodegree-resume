@@ -7,11 +7,11 @@ var bio = {
 	"name": "Abdulrahman",
 	"role": "Web developer",
 	"contacts": {
-		"mobile"   : "+20-11-233-19313",
+		"mobile"   : "+20-112-3319313",
 		"email": "abd.elsayed@hotmail.com",
 		"github": "elhaw",
 		"twitter":"@aeaue_body2",
-		"location":"Egypt",
+		"location":"MeetMaaned ",
 		"welcomeMessage": "Welcome to my page, hope you enjoy !!",
 	},
 	"skills": ["HTML", "Linux", "JavaScript", "C programming","CSS"],
@@ -41,8 +41,8 @@ var education = {
   		},
   			"onlinecourses" : {
 
-  				"title" : "LInux Foundation",
-  				"school":"Lynda",
+  				"title" : "JavaScript",
+  				"school":"Udacity",
   				"date" :"2016",
   				"url":"www.lynda.com"
 
@@ -58,7 +58,7 @@ var formattedschoolLocation = HTMLschoolLocation.replace("%data%",education.scho
 var formattedschoolMajor = HTMLschoolMajor.replace("%data%",education.school["major"]);
 $("#education").append(formattedschoolStart);
 $(".education-entry").append(formattedschoolName);
-$(".education-entry").append(formattedschoolDegree);
+$(" #education a").append(formattedschoolDegree);
 $(".education-entry").append(formattedschoolDates);
 $(".education-entry").append(formattedschoolLocation);
 $(".education-entry").append(formattedschoolMajor);
@@ -70,10 +70,10 @@ var formattedonlineDates = HTMLonlineDates.replace("%data%",education.onlinecour
 var formattedonlineURL = HTMLonlineURL.replace("%data%",education.onlinecourses["url"]);
 
 $("#education").append(formattedonlineClasses);
-$(".education-entry").append(formattedonlineTitle);
-$(".education-entry").append(formattedonlineSchool);
-$(".education-entry").append(formattedonlineDates);
-$(".education-entry").append(formattedonlineURL);
+$("h3").append(formattedonlineTitle);
+$(" #education h3 a").append(formattedonlineSchool);
+$("h3").append(formattedonlineDates);
+$("h3").append(formattedonlineURL);
 
 
 
@@ -146,7 +146,7 @@ $("#skills").append(formatedSkills5);
 // work place holder
 $("#workExperience").append(formattedworkStart);
 $(".work-entry").append(formatedworkEmployer);
-$(".work-entry").append(formatedworkTitle);
+$("#workExperience a").append(formatedworkTitle);
 $(".work-entry").append(formatedworkDates);
 $(".work-entry").append(formatedworkLocation);
 $(".work-entry").append(formatedworkDescription);
@@ -154,6 +154,6 @@ $(".work-entry").append(formatedworkDescription);
 //projects section
 $("#projects").append(formattedprojectStart);
 $(".project-entry").append(formattedprojectTitle);
-$("project-entry").append(formatteprojectDates);
+$(".project-entry").append(formatteprojectDates);
 $(".project-entry").append(formattedprojectDescription);
 $(".project-entry").append(formattedprojectImage);
