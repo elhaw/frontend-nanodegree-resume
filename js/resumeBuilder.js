@@ -11,7 +11,7 @@ var bio = {
 		"email": "abd.elsayed@hotmail.com",
 		"github": "elhaw",
 		"twitter":"@aeaue_body2",
-		"location":"MeetMaaned ",
+		"location":"Meet Maaned ",
 		"welcomeMessage": "Welcome to my page, hope you enjoy !!",
 	},
 	"skills": ["HTML", "Linux", "JavaScript", "C programming","CSS"],
@@ -157,3 +157,11 @@ $(".project-entry").append(formattedprojectTitle);
 $(".project-entry").append(formatteprojectDates);
 $(".project-entry").append(formattedprojectDescription);
 $(".project-entry").append(formattedprojectImage);
+
+
+//footer contact
+$("#footerContacts").append(formatedMobile);
+$("#footerContacts").append(formatedEmail);
+$("#footerContacts").append(formatedTwitter);
+$("#footerContacts").append(formatedGithub);
+$("#footerContacts").append(formatedLocation);
