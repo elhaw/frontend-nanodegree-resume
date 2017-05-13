@@ -158,6 +158,9 @@ $(".project-entry").append(formatteprojectDates);
 $(".project-entry").append(formattedprojectDescription);
 $(".project-entry").append(formattedprojectImage);
 
+//add the map
+$("#mapDiv").append(googleMap);
+
 
 //footer contact
 $("#footerContacts").append(formatedMobile);
