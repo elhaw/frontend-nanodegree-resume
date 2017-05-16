@@ -221,3 +221,4 @@ $("#footerContacts").append(formatedTwitter);
 $("#footerContacts").append(formatedGithub);
 $("#footerContacts").append(formatedLocation);
 $("#mapDiv").append(googleMap);
+
