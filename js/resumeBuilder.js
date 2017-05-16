@@ -86,7 +86,7 @@ var projects = {
   			"title" : "Onliine resume", 
 			"date" :"march ,30 2017",
 			"description" :"The second project is online resume",
-			"url":["images/197x148.gif","images/197x148.gif"]
+			"url":["images/197x148.gif","images/portfolio.jpg","images/197x148.gif","images/portfolio.jpg"]
   			}
   			]
 };
@@ -119,6 +119,19 @@ var formatedGithub   = HTMLgithub.replace("%data%",bio.contacts.github);
 var formatedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 var formatedPicture  = HTMLbioPic.replace("%data%",bio.bioPic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%",bio.contacts.welcomeMessage);
+
+
+
+// bio place holder
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$("#topContacts").append(formatedMobile);
+$("#topContacts").append(formatedEmail);
+$("#topContacts").append(formatedTwitter);
+$("#topContacts").append(formatedGithub);
+$("#topContacts").append(formatedLocation);
+$("#header").append(formatedPicture);
+$("#header").append(formattedMessage);
 
 
 // // work experience
@@ -162,10 +175,11 @@ for (var i = 0 ; i < projects.project.length ; i++)
 
 		var formattedprojectDescription = HTMLprojectDescription.replace("%data%",projects.project[i].description);
 		$(".project-entry:last").append(formattedprojectDescription);
-		
-		var formattedprojectImage = HTMLprojectImage.replace("%data%",projects.project[i].url[0]);
-		$(".project-entry:last").append(formattedprojectImage);
-	
+		for ( var j = 0 ; j < projects.project[i].url.length ; j++)
+		{
+			var formattedprojectImage = HTMLprojectImage.replace("%data%",projects.project[i].url[j]);
+			$(".project-entry:last").append(formattedprojectImage);
+		}
 	
 }
 //education section
@@ -208,17 +222,6 @@ for (var i = 0 ; i < education.onlinecourses.length ; i++)
 
 
 
-
-// bio place holder
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#topContacts").append(formatedMobile);
-$("#topContacts").append(formatedEmail);
-$("#topContacts").append(formatedTwitter);
-$("#topContacts").append(formatedGithub);
-$("#topContacts").append(formatedLocation);
-$("#header").append(formatedPicture);
-$("#header").append(formattedMessage);
 
 if (bio.skills.length !== 0 )
 {
