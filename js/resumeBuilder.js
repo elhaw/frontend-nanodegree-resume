@@ -28,11 +28,11 @@ var work = {
         "description": "responsible for implementing visual and interactive"
 	},
 	{
-		"employer"   : "IT solutions" ,
-        "title"      : "Front-end Web developer" ,
-        "location"   : "Alexandria", 
-        "dates"      : "2016-July till present" ,
-        "description": "responsible for implementing visual and interactive"
+		"employer"   : "overcoffesolution" ,
+        "title"      : "software developer" ,
+        "location"   : "Canada", 
+        "dates"      : "2020-July till present" ,
+        "description": "develop new software tools to automate fabrication "
 	}
   ]
 };
@@ -102,28 +102,30 @@ var formattedMessage = HTMLwelcomeMsg.replace("%data%",bio.contacts.welcomeMessa
 
 
 // // work experience
-var formattedworkStart = HTMLworkStart;
-$("#workExperience").append(formattedworkStart);
 
 
+	
 
 // work place holder
 for (var i = 0 ; i < work.jobs.length ; i++)
 {
-var formatedworkEmployer    = HTMLworkEmployer.replace("%data%",work.jobs[i].employer) ;
-$(".work-entry").append(formatedworkEmployer);
 
-var formatedworkTitle       = HTMLworkTitle.replace("%data%",work.jobs[i].title) ;
-$(".work-entry a").append(formatedworkTitle);
+	var formattedworkStart = HTMLworkStart;
+	$("#workExperience").append(formattedworkStart);
+	var formatedworkEmployer    = HTMLworkEmployer.replace("%data%",work.jobs[i].employer) ;
+	var formatedworkTitle       = HTMLworkTitle.replace("%data%",work.jobs[i].title) ;
 
-var formatedworkDates       = HTMLworkDates.replace("%data%",work.jobs[i].dates);
-$(".work-entry").append(formatedworkDates);
+	$(".work-entry:last").append(formatedworkEmployer + formatedworkTitle);
 
-var formatedworkLocation    = HTMLworkLocation.replace("%data%",work.jobs[i].location);
-$(".work-entry").append(formatedworkLocation);
+	var formatedworkDates       = HTMLworkDates.replace("%data%",work.jobs[i].dates);
+	$(".work-entry:last").append(formatedworkDates);
 
-var formatedworkDescription =  HTMLworkDescription.replace("%data%",work.jobs[i].description);
-$(".work-entry").append(formatedworkDescription);
+	var formatedworkLocation    = HTMLworkLocation.replace("%data%",work.jobs[i].location);
+	$(".work-entry:last").append(formatedworkLocation);
+
+	var formatedworkDescription =  HTMLworkDescription.replace("%data%",work.jobs[i].description);
+	$(".work-entry:last").append(formatedworkDescription);
+	
 
 }
 //project section
