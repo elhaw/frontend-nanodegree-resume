@@ -86,27 +86,10 @@ var projects = {
   			"title" : "Onliine resume", 
 			"date" :"march ,30 2017",
 			"description" :"The second project is online resume",
-			"url":["images/197x148.gif","images/portfolio.jpg","images/197x148.gif","images/portfolio.jpg"]
+			"url":["images/197x148.gif","images/197x148.gif"]
   			}
   			]
 };
-
-
-
-
-
-//projects section
-
-
-
-//skills
-var formatedSkillsStart =  HTMLskillsStart;
-var formatedSkills1 = HTMLskills.replace("%data%",bio.skills[0]);
-var formatedSkills2 = HTMLskills.replace("%data%",bio.skills[1]);
-var formatedSkills3 = HTMLskills.replace("%data%",bio.skills[2]);
-var formatedSkills4 = HTMLskills.replace("%data%",bio.skills[3]);
-var formatedSkills5 = HTMLskills.replace("%data%",bio.skills[4]);
-
 
 
 // biograpghy
@@ -134,12 +117,21 @@ $("#header").append(formatedPicture);
 $("#header").append(formattedMessage);
 
 
-// // work experience
+//skills
+var formatedSkillsStart =  HTMLskillsStart;
+$("#header").append(formatedSkillsStart);
+
+if (bio.skills.length !== 0 )
+{
+	for (var i = 0 ; i < bio.skills.length ; i++)
+	{
+		var formatedSkills = HTMLskills.replace("%data%",bio.skills[i]);
+		$("#skills").append(formatedSkills);
+	}
+}
 
 
-	
-
-// work place holder
+// work 
 for (var i = 0 ; i < work.jobs.length ; i++)
 {
 
@@ -201,7 +193,7 @@ for (var i = 0 ; i < education.school.length ; i++)
 	var formattedschoolMajor = HTMLschoolMajor.replace("%data%",education.school[i]["major"]);
 	$(".education-entry:last").append(formattedschoolMajor);
 }
-
+//online classes
 var formattedonlineClasses = HTMLonlineClasses;
 $("#education").append(formattedonlineClasses);
 
@@ -220,29 +212,11 @@ for (var i = 0 ; i < education.onlinecourses.length ; i++)
 }
 
 
-
-
-
-if (bio.skills.length !== 0 )
-{
-
-$("#header").append(formatedSkillsStart);
-$("#skills").append(formatedSkills1);
-$("#skills").append(formatedSkills2);
-$("#skills").append(formatedSkills3);
-$("#skills").append(formatedSkills4);
-$("#skills").append(formatedSkills5);
-}
-
-
-
-//add the map
-$("#mapDiv").append(googleMap);
-
-
 //footer contact
 $("#footerContacts").append(formatedMobile);
 $("#footerContacts").append(formatedEmail);
 $("#footerContacts").append(formatedTwitter);
 $("#footerContacts").append(formatedGithub);
 $("#footerContacts").append(formatedLocation);
+
+$("#mapDiv").append(googleMap);
