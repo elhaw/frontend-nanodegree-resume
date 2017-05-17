@@ -88,7 +88,8 @@ var projects = {
 			"description" :"The second project is online resume",
 			"url":["images/197x148.gif","images/197x148.gif"]
   			}
-  			]
+  		],
+  	"display": function () {}
 };
 
 
