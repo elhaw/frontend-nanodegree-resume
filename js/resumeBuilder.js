@@ -89,7 +89,7 @@ var projects = {
 			"url":["images/197x148.gif","images/197x148.gif"]
   			}
   		],
-  	"display": function () {}
+  	"display": function display () {}
 };
 
 
