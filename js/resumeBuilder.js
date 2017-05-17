@@ -4,7 +4,7 @@ This is empty on purpose! Your code to build the resume will go here.
 //[string].replace([old],[new])
 // biography
 var bio = {
-	"name": "Abdulrahman",
+	"name": "abdulrahman elhaw ",
 	"role": "Web developer",
 	"contacts": {
 		"mobile"   : "+20-112-3319313",
@@ -221,5 +221,12 @@ $("#footerContacts").append(formatedTwitter);
 $("#footerContacts").append(formatedGithub);
 $("#footerContacts").append(formatedLocation);
 $("#mapDiv").append(googleMap);
+// internationalize
+function inName(name) {
+var fields = name.split(" ");
+var internationalize = fields[0][0].toLocaleUpperCase() + fields[0].slice(1) +" " + fields[1].toLocaleUpperCase() ;
 
+
+return internationalize;
+}
 $("#main").append(internationalizeButton);
