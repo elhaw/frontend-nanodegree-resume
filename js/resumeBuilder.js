@@ -156,26 +156,29 @@ function displayWork(){
 }
 displayWork();
 //project section
-for (var i = 0 ; i < projects.project.length ; i++)
-{
+projects.display = function () {
+	for (var i = 0 ; i < projects.project.length ; i++)
+	{
 
-		var formattedprojectStart = HTMLprojectStart;
-		$("#projects").append(formattedprojectStart);
-		var formattedprojectTitle = HTMLprojectTitle.replace("%data%",projects.project[i].title);
-		$(".project-entry:last").append(formattedprojectTitle);
+			var formattedprojectStart = HTMLprojectStart;
+			$("#projects").append(formattedprojectStart);
+			var formattedprojectTitle = HTMLprojectTitle.replace("%data%",projects.project[i].title);
+			$(".project-entry:last").append(formattedprojectTitle);
 
-		var formatteprojectDates = HTMLprojectDates.replace("%data%",projects.project[i].date);
-		$(".project-entry:last").append(formatteprojectDates);
+			var formatteprojectDates = HTMLprojectDates.replace("%data%",projects.project[i].date);
+			$(".project-entry:last").append(formatteprojectDates);
 
-		var formattedprojectDescription = HTMLprojectDescription.replace("%data%",projects.project[i].description);
-		$(".project-entry:last").append(formattedprojectDescription);
-		for ( var j = 0 ; j < projects.project[i].url.length ; j++)
-		{
-			var formattedprojectImage = HTMLprojectImage.replace("%data%",projects.project[i].url[j]);
-			$(".project-entry:last").append(formattedprojectImage);
-		}
-	
+			var formattedprojectDescription = HTMLprojectDescription.replace("%data%",projects.project[i].description);
+			$(".project-entry:last").append(formattedprojectDescription);
+			for ( var j = 0 ; j < projects.project[i].url.length ; j++)
+			{
+				var formattedprojectImage = HTMLprojectImage.replace("%data%",projects.project[i].url[j]);
+				$(".project-entry:last").append(formattedprojectImage);
+			}
+		
+	}
 }
+projects.display();
 //education section
 
 for (var i = 0 ; i < education.school.length ; i++)
