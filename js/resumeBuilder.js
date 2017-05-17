@@ -222,3 +222,4 @@ $("#footerContacts").append(formatedGithub);
 $("#footerContacts").append(formatedLocation);
 $("#mapDiv").append(googleMap);
 
+$("#main").append(internationalizeButton);
