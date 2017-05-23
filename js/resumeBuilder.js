@@ -1,3 +1,14 @@
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
+
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
@@ -132,33 +143,33 @@ var education = {
         for (var i = 0; i < education.school.length; i++) {
             var formattedschoolStart = HTMLschoolStart;
             $("#education").append(formattedschoolStart);
-            var formattedschoolName = HTMLschoolName.replace("%data%", education.school[i]["name"]);
-            var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.school[i]["degree"]);
+            var formattedschoolName = HTMLschoolName.replace("%data%", education.school[i].name);
+            var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.school[i].degree);
             $(".education-entry:last").append(formattedschoolName + formattedschoolDegree);
 
-            var formattedschoolDates = HTMLschoolDates.replace("%data%", education.school[i]["date"]);
+            var formattedschoolDates = HTMLschoolDates.replace("%data%", education.school[i].date);
             $(".education-entry:last").append(formattedschoolDates);
 
-            var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.school[i]["location"]);
+            var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.school[i].location);
             $(".education-entry:last").append(formattedschoolLocation);
 
-            var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.school[i]["major"]);
+            var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.school[i].major);
             $(".education-entry:last").append(formattedschoolMajor);
         }
         //online classes
         var formattedonlineClasses = HTMLonlineClasses;
         $("#education").append(formattedonlineClasses);
 
-        for (var i = 0; i < education.onlinecourses.length; i++) {
+        for ( i = 0; i < education.onlinecourses.length; i++) {
             $("#education").append(formattedschoolStart);
-            var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlinecourses[i]["title"]);
-            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlinecourses[i]["school"]);
+            var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlinecourses[i].title);
+            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlinecourses[i].school);
             $(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool);
 
-            var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlinecourses[i]["date"]);
+            var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlinecourses[i].date);
             $(".education-entry:last").append(formattedonlineDates);
 
-            var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlinecourses[i]["url"]);
+            var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlinecourses[i].url);
             $(".education-entry:last").append(formattedonlineURL);
         }
     }
