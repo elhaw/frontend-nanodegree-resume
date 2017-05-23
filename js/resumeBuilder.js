@@ -139,9 +139,9 @@ var education = {
         }
     ],
     "display": function() {
+            var formattedschoolStart = HTMLschoolStart;
 
         for (var i = 0; i < education.school.length; i++) {
-            var formattedschoolStart = HTMLschoolStart;
             $("#education").append(formattedschoolStart);
             var formattedschoolName = HTMLschoolName.replace("%data%", education.school[i].name);
             var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.school[i].degree);
@@ -158,6 +158,7 @@ var education = {
         }
         //online classes
         var formattedonlineClasses = HTMLonlineClasses;
+    
         $("#education").append(formattedonlineClasses);
 
         for ( i = 0; i < education.onlinecourses.length; i++) {
