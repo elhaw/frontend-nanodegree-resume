@@ -222,11 +222,11 @@ $("#mapDiv").append(googleMap);
 
 
 // internationalize
-// function inName(name) {
-// var fields = name.split(" ");
-// var internationalize = fields[0][0].toLocaleUpperCase() + fields[0].slice(1) +" " + fields[1].toLocaleUpperCase() ;
+function inName(name) {
+var fields = name.split(" ");
+var internationalize = fields[0][0].toLocaleUpperCase() + fields[0].slice(1) +" " + fields[1].toLocaleUpperCase() ;
 
 
-// return internationalize;
-// }
-// $("#main").append(internationalizeButton);
+return internationalize;
+}
+$("#main").append(internationalizeButton);
