@@ -8,6 +8,16 @@
 //
 // Additionally, you can toggle specific options in the Configure
 // menu.
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
 
 /*
 This is empty on purpose! Your code to build the resume will go here.
@@ -83,7 +93,7 @@ var work = {
         }
     ],
     "display": function() {
-        for (job in work.jobs) {
+        for (var job in work.jobs) {
 
             var formattedworkStart = HTMLworkStart;
             $("#workExperience").append(formattedworkStart);
