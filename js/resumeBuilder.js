@@ -84,22 +84,22 @@ var work = {
         }
     ],
     "display": function() {
-        for (var job in work.jobs) {
-
+        for (var i = 0 ; i < work.jobs.length ; i++)
+        {
             var formattedworkStart = HTMLworkStart;
             $("#workExperience").append(formattedworkStart);
-            var formatedworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-            var formatedworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+            var formatedworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+            var formatedworkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
 
             $(".work-entry:last").append(formatedworkEmployer + formatedworkTitle);
 
-            var formatedworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+            var formatedworkDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
             $(".work-entry:last").append(formatedworkDates);
 
-            var formatedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+            var formatedworkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
             $(".work-entry:last").append(formatedworkLocation);
 
-            var formatedworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+            var formatedworkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
             $(".work-entry:last").append(formatedworkDescription);
         }
 
