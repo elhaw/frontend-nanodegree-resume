@@ -48,21 +48,12 @@ var bio = {
         var formatedPicture = HTMLbioPic.replace("%data%", bio.biopic);
         var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.contacts.welcomeMessage);
 
-        $("#header").prepend(formattedRole);
-        $("#header").prepend(formattedName);
-        $("#topContacts").append(formatedMobile);
-        $("#topContacts").append(formatedEmail);
-        $("#topContacts").append(formatedTwitter);
-        $("#topContacts").append(formatedGithub);
-        $("#topContacts").append(formatedLocation);
-        $("#header").append(formatedPicture);
-        $("#header").append(formattedMessage);
 
-        $("#footerContacts").append(formatedMobile);
-        $("#footerContacts").append(formatedEmail);
-        $("#footerContacts").append(formatedTwitter);
-        $("#footerContacts").append(formatedGithub);
-        $("#footerContacts").append(formatedLocation);
+        $("#header").prepend(formattedName,formattedRole);
+        $("#topContacts").append(formatedMobile,formatedEmail,formatedTwitter,formatedGithub,formatedLocation);
+        $("#header").append(formatedPicture,formattedMessage);
+        //append multiple elements like this is to include all of the elements as arguments to a single .append()
+        $("#footerContacts").append(formatedMobile,formatedEmail,formatedTwitter,formatedGithub,formatedLocation);
         //skills
         var formatedSkillsStart = HTMLskillsStart;
         $("#header").append(formatedSkillsStart);
