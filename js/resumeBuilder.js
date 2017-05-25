@@ -124,18 +124,18 @@ var education = {
             "url": "https://www.tugraz.at/home/"
         }
     ],
-    "onlinecourses": [{
+    "onlineCourses": [{
 
             "title": "JavaScript",
             "school": "Udacity",
-            "date": "2016",
+            "dates": "2016",
             "url": "www.lynda.com"
 
         },
         {
             "title": "Linux Foundation",
             "school": "Edx",
-            "date": "2016",
+            "dates": "2016",
             "url": "www.edx.com"
         }
     ],
@@ -164,16 +164,16 @@ var education = {
     
         $("#education").append(formattedonlineClasses);
 
-        for ( i = 0; i < education.onlinecourses.length; i++) {
+        for ( i = 0; i < education.onlineCourses.length; i++) {
             $("#education").append(formattedschoolStart);
-            var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlinecourses[i].title);
-            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlinecourses[i].school);
+            var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
+            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
             $(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool);
 
-            var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlinecourses[i].dates);
+            var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
             $(".education-entry:last").append(formattedonlineDates);
 
-            var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlinecourses[i].url);
+            var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
             $(".education-entry:last").append(formattedonlineURL);
         }
     }
@@ -182,7 +182,7 @@ var education = {
 var projects = {
 
 
-    "project": [{
+    "projects": [{
 
             "title": "website portfolio",
             "date": "march ,30 2017",
@@ -197,20 +197,20 @@ var projects = {
         }
     ],
     "display": function() {
-        for (var i = 0; i < projects.project.length; i++) {
+        for (var i = 0; i < projects.projects.length; i++) {
 
             var formattedprojectStart = HTMLprojectStart;
             $("#projects").append(formattedprojectStart);
-            var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.project[i].title);
+            var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
             $(".project-entry:last").append(formattedprojectTitle);
 
-            var formatteprojectDates = HTMLprojectDates.replace("%data%", projects.project[i].date);
+            var formatteprojectDates = HTMLprojectDates.replace("%data%", projects.projects[i].date);
             $(".project-entry:last").append(formatteprojectDates);
 
-            var formattedprojectDescription = HTMLprojectDescription.replace("%data%", projects.project[i].description);
+            var formattedprojectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
             $(".project-entry:last").append(formattedprojectDescription);
-            for (var j = 0; j < projects.project[i].url.length; j++) {
-                var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.project[i].url[j]);
+            for (var j = 0; j < projects.projects[i].url.length; j++) {
+                var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.projects[i].url[j]);
                 $(".project-entry:last").append(formattedprojectImage);
             }
 
