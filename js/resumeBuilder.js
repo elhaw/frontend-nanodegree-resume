@@ -185,15 +185,15 @@ var projects = {
     "projects": [{
 
             "title": "website portfolio",
-            "date": "march ,30 2017",
+            "dates": "march ,30 2017",
             "description": "My first portfolio in front-end nano degree",
-            "url": ["images/197x148.gif", "images/197x148.gif"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         },
         {
             "title": "Onliine resume",
-            "date": "march ,30 2017",
+            "dates": "march ,30 2017",
             "description": "The second project is online resume",
-            "url": ["images/197x148.gif", "images/197x148.gif"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         }
     ],
     "display": function() {
@@ -204,13 +204,13 @@ var projects = {
             var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
             $(".project-entry:last").append(formattedprojectTitle);
 
-            var formatteprojectDates = HTMLprojectDates.replace("%data%", projects.projects[i].date);
+            var formatteprojectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
             $(".project-entry:last").append(formatteprojectDates);
 
             var formattedprojectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
             $(".project-entry:last").append(formattedprojectDescription);
-            for (var j = 0; j < projects.projects[i].url.length; j++) {
-                var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.projects[i].url[j]);
+            for (var j = 0; j < projects.projects[i].images.length; j++) {
+                var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
                 $(".project-entry:last").append(formattedprojectImage);
             }
 
