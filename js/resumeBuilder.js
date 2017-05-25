@@ -111,16 +111,16 @@ var education = {
             "name": "Mansoura University",
             "degree": "Bachelor",
             "location": "Mansoura",
-            "major": "computer science",
-            "date": "2009-2015",
+            "majors": ["computer science","Bioscience"],
+            "dates": "2009-2015",
             "url": "http://www.mans.edu.eg/"
         },
         {
             "name": "Graz University of technology",
             "degree": "Master",
             "location": "Austria",
-            "major": "Software develompment",
-            "date": "2018-2019",
+            "majors": ["Software develompment","Internet of things"],
+            "dates": "2018-2019",
             "url": "https://www.tugraz.at/home/"
         }
     ],
@@ -148,14 +148,16 @@ var education = {
             var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.school[i].degree);
             $(".education-entry:last").append(formattedschoolName + formattedschoolDegree);
 
-            var formattedschoolDates = HTMLschoolDates.replace("%data%", education.school[i].date);
+            var formattedschoolDates = HTMLschoolDates.replace("%data%", education.school[i].dates);
             $(".education-entry:last").append(formattedschoolDates);
 
             var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.school[i].location);
             $(".education-entry:last").append(formattedschoolLocation);
-
-            var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.school[i].major);
-            $(".education-entry:last").append(formattedschoolMajor);
+            for (var j = 0 ; j < education.school[i].majors.length ; j++ )
+            {
+                var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.school[i].majors[j]);
+                $(".education-entry:last").append(formattedschoolMajor);
+            }
         }
         //online classes
         var formattedonlineClasses = HTMLonlineClasses;
@@ -168,7 +170,7 @@ var education = {
             var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlinecourses[i].school);
             $(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool);
 
-            var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlinecourses[i].date);
+            var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlinecourses[i].dates);
             $(".education-entry:last").append(formattedonlineDates);
 
             var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlinecourses[i].url);
