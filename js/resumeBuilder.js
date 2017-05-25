@@ -36,7 +36,7 @@ var bio = {
         "welcomeMessage": "Welcome to my page, hope you enjoy !!",
     },
     "skills": ["HTML", "Linux", "JavaScript", "C programming", "CSS"],
-    "bioPic": ["images/fry.jpg"],
+    "biopic": ["images/fry.jpg"],
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -45,7 +45,7 @@ var bio = {
         var formatedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formatedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formatedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-        var formatedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
+        var formatedPicture = HTMLbioPic.replace("%data%", bio.biopic);
         var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.contacts.welcomeMessage);
 
         $("#header").prepend(formattedRole);
