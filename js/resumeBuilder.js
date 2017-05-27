@@ -18,7 +18,6 @@
 //
 // Additionally, you can toggle specific options in the Configure
 // menu.
-
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
@@ -33,8 +32,8 @@ var bio = {
         "github": "elhaw",
         "twitter": "@aeaue_body2",
         "location": "Egypt",
-        "welcomeMessage": "Welcome to my page, hope you enjoy !!",
     },
+    "welcomeMessage": "Welcome to my page, hope you enjoy !!",
     "skills": ["HTML", "Linux", "JavaScript", "C programming", "CSS"],
     "biopic": ["images/fry.jpg"],
     "display": function() {
@@ -46,14 +45,14 @@ var bio = {
         var formatedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formatedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         var formatedPicture = HTMLbioPic.replace("%data%", bio.biopic);
-        var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.contacts.welcomeMessage);
+        var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
 
-        $("#header").prepend(formattedName,formattedRole);
-        $("#topContacts").append(formatedMobile,formatedEmail,formatedTwitter,formatedGithub,formatedLocation);
-        $("#header").append(formatedPicture,formattedMessage);
+        $("#header").prepend(formattedName, formattedRole);
+        $("#topContacts").append(formatedMobile, formatedEmail, formatedTwitter, formatedGithub, formatedLocation);
+        $("#header").append(formatedPicture, formattedMessage);
         //append multiple elements like this is to include all of the elements as arguments to a single .append()
-        $("#footerContacts").append(formatedMobile,formatedEmail,formatedTwitter,formatedGithub,formatedLocation);
+        $("#footerContacts").append(formatedMobile, formatedEmail, formatedTwitter, formatedGithub, formatedLocation);
         //skills
         var formatedSkillsStart = HTMLskillsStart;
         $("#header").append(formatedSkillsStart);
@@ -84,8 +83,7 @@ var work = {
         }
     ],
     "display": function() {
-        for (var i = 0 ; i < work.jobs.length ; i++)
-        {
+        for (var i = 0; i < work.jobs.length; i++) {
             var formattedworkStart = HTMLworkStart;
             $("#workExperience").append(formattedworkStart);
             var formatedworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
@@ -111,7 +109,7 @@ var education = {
             "name": "Mansoura University",
             "degree": "Bachelor",
             "location": "Mansoura",
-            "majors": ["computer science","Bioscience"],
+            "majors": ["computer science", "Bioscience"],
             "dates": "2009-2015",
             "url": "http://www.mans.edu.eg/"
         },
@@ -119,7 +117,7 @@ var education = {
             "name": "Graz University of technology",
             "degree": "Master",
             "location": "Austria",
-            "majors": ["Software develompment","Internet of things"],
+            "majors": ["Software develompment", "Internet of things"],
             "dates": "2018-2019",
             "url": "https://www.tugraz.at/home/"
         }
@@ -140,7 +138,7 @@ var education = {
         }
     ],
     "display": function() {
-            var formattedschoolStart = HTMLschoolStart;
+        var formattedschoolStart = HTMLschoolStart;
 
         for (var i = 0; i < education.school.length; i++) {
             $("#education").append(formattedschoolStart);
@@ -153,18 +151,17 @@ var education = {
 
             var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.school[i].location);
             $(".education-entry:last").append(formattedschoolLocation);
-            for (var j = 0 ; j < education.school[i].majors.length ; j++ )
-            {
+            for (var j = 0; j < education.school[i].majors.length; j++) {
                 var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.school[i].majors[j]);
                 $(".education-entry:last").append(formattedschoolMajor);
             }
         }
         //online classes
         var formattedonlineClasses = HTMLonlineClasses;
-    
+
         $("#education").append(formattedonlineClasses);
 
-        for ( i = 0; i < education.onlineCourses.length; i++) {
+        for (i = 0; i < education.onlineCourses.length; i++) {
             $("#education").append(formattedschoolStart);
             var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
             var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
