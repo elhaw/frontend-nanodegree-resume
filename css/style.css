@@ -13,9 +13,7 @@ h6 {
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
-#header {
-    background-color: #733939 !important;
-}
+
 .clear-fix {
     overflow: auto;
 }
@@ -111,7 +109,7 @@ a {
 /* TODO: Replace with image later */
 
 #header {
-    background-color: #484848;
+    background-color: #733939;
 }
 .flex-box {
     display: -webkit-flex;

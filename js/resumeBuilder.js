@@ -105,7 +105,7 @@ var work = {
 };
 //education
 var education = {
-    "school": [{
+    "schools": [{
             "name": "Mansoura University",
             "degree": "Bachelor",
             "location": "Mansoura",
@@ -140,19 +140,19 @@ var education = {
     "display": function() {
         var formattedschoolStart = HTMLschoolStart;
 
-        for (var i = 0; i < education.school.length; i++) {
+        for (var i = 0; i < education.schools.length; i++) {
             $("#education").append(formattedschoolStart);
-            var formattedschoolName = HTMLschoolName.replace("%data%", education.school[i].name);
-            var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.school[i].degree);
+            var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
+            var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
             $(".education-entry:last").append(formattedschoolName + formattedschoolDegree);
 
-            var formattedschoolDates = HTMLschoolDates.replace("%data%", education.school[i].dates);
+            var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
             $(".education-entry:last").append(formattedschoolDates);
 
-            var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.school[i].location);
+            var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
             $(".education-entry:last").append(formattedschoolLocation);
-            for (var j = 0; j < education.school[i].majors.length; j++) {
-                var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.school[i].majors[j]);
+            for (var j = 0; j < education.schools[i].majors.length; j++) {
+                var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]);
                 $(".education-entry:last").append(formattedschoolMajor);
             }
         }
