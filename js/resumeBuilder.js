@@ -109,17 +109,9 @@ var education = {
             "name": "Mansoura University",
             "degree": "Bachelor",
             "location": "Mansoura",
-            "majors": ["computer science", "Bioscience"],
+            "majors": ["computer science"],
             "dates": "2009-2015",
             "url": "http://www.mans.edu.eg/"
-        },
-        {
-            "name": "Graz University of technology",
-            "degree": "Master",
-            "location": "Austria",
-            "majors": ["Software develompment", "Internet of things"],
-            "dates": "2018-2019",
-            "url": "https://www.tugraz.at/home/"
         }
     ],
     "onlineCourses": [{
