@@ -33,7 +33,8 @@ var bio = {
         "twitter": "@aeaue_body2",
         "location": "Egypt",
     },
-    "welcomeMessage": "Welcome to my page, hope you enjoy !!",
+    "welcomeMessage": "I'm passionate Software Developer. I love programming language of different prospective\
+     form compiled to interpreted ones, but I'm currently focusing on learning front-end web development.",
     "skills": ["HTML", "Linux", "JavaScript", "C programming", "CSS"],
     "biopic": ["images/personal-image.jpg"],
     "display": function() {
