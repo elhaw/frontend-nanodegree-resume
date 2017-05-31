@@ -34,8 +34,8 @@ var bio = {
         "location": "Egypt",
     },
     "welcomeMessage": "I'm passionate Software Developer. I love programming language of different prospective\
-     form compiled to interpreted ones, but I'm currently focusing on learning front-end web development.",
-    "skills": ["HTML", "Linux", "JavaScript", "C programming", "CSS"],
+     whether compiled or interpreted, but I'm currently focusing on learning front-end web development.",
+    "skills": ["C programming","Linux","JavaScript",  "HTML",  "CSS"],
     "biopic": ["images/personal-image.jpg"],
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -74,13 +74,6 @@ var work = {
             "location": "Alexandria",
             "dates": "2016-July till present",
             "description": "responsible for implementing visual and interactive"
-        },
-        {
-            "employer": "overcoffesolution",
-            "title": "software developer",
-            "location": "Canada",
-            "dates": "2020-July till present",
-            "description": "develop new software tools to automate fabrication "
         }
     ],
     "display": function() {
@@ -110,17 +103,17 @@ var education = {
             "name": "Mansoura University",
             "degree": "Bachelor",
             "location": "Mansoura",
-            "majors": ["computer science", "Bioscience"],
+            "majors": ["Electronic and Communication Engineering"],
             "dates": "2009-2015",
             "url": "http://www.mans.edu.eg/"
         }
     ],
     "onlineCourses": [{
 
-            "title": "JavaScript",
+            "title": "Front-End Web Developer Nanodegree",
             "school": "Udacity",
             "dates": "2016",
-            "url": "www.lynda.com"
+            "url": "www.udacity.com"
 
         },
         {
