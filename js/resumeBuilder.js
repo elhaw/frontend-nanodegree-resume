@@ -68,13 +68,13 @@ var bio = {
 };
 // work
 var work = {
-    "jobs": [{
-            "employer": "IT solutions",
-            "title": "Front-end Web developer",
-            "location": "Alexandria",
-            "dates": "2016-July till present",
-            "description": "responsible for implementing visual and interactive"
-        }
+    "jobs": [//{
+            // "employer": "IT solutions",
+            // "title": "Front-end Web developer",
+            // "location": "Alexandria",
+            // "dates": "2016-July till present",
+            // "description": "responsible for implementing visual and interactive"
+        // }
     ],
     "display": function() {
         for (var i = 0; i < work.jobs.length; i++) {
