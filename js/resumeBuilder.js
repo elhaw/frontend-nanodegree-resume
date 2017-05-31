@@ -35,7 +35,7 @@ var bio = {
     },
     "welcomeMessage": "Welcome to my page, hope you enjoy !!",
     "skills": ["HTML", "Linux", "JavaScript", "C programming", "CSS"],
-    "biopic": ["images/fry.jpg"],
+    "biopic": ["images/personal-image.jpg"],
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -109,7 +109,7 @@ var education = {
             "name": "Mansoura University",
             "degree": "Bachelor",
             "location": "Mansoura",
-            "majors": ["computer science"],
+            "majors": ["computer science", "Bioscience"],
             "dates": "2009-2015",
             "url": "http://www.mans.edu.eg/"
         }
