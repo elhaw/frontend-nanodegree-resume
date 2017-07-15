@@ -186,8 +186,8 @@ var projects = {
             "dates": "july ,15 2017",
             "description": "Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it\
              runs at 60fps and achieves a PageSpeed score of at least 90.",
-            "images": ["images/website-optmization.jpg"]
-        },
+            "images": ["images/website-optmization.JPG"]
+        }
     ],
     "display": function() {
         for (var i = 0; i < projects.projects.length; i++) {
