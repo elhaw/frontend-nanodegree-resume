@@ -174,13 +174,20 @@ var projects = {
             "images": ["images/portfolio.jpg"]
         },
         {
-            "title": "Onliine resume",
+            "title": "Online resume",
             "dates": "march ,30 2017",
             "description": "Using jQuery, developed an interactive resume application that reads all data from a JSON\
              file and then dynamically modifies the DOM to display the information. Further customized the project by \
              personalizing the design using CSS.",
             "images": ["images/ineteractive-resume.jpg", "images/resume-map.jpg"]
-        }
+        },
+        {
+            "title": "Website Optimization",
+            "dates": "july ,15 2017",
+            "description": "Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it\
+             runs at 60fps and achieves a PageSpeed score of at least 90.",
+            "images": ["images/website-optmization.jpg"]
+        },
     ],
     "display": function() {
         for (var i = 0; i < projects.projects.length; i++) {
